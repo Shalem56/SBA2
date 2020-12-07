@@ -9,13 +9,15 @@ import org.springframework.stereotype.Service;
 import com.iiht.training.eloan.dto.ClerkDto;
 import com.iiht.training.eloan.dto.ManagerDto;
 import com.iiht.training.eloan.dto.UserDto;
+import com.iiht.training.eloan.dto.exception.ExceptionResponse;
 import com.iiht.training.eloan.entity.Clerk;
 import com.iiht.training.eloan.entity.Manager;
 import com.iiht.training.eloan.repository.ClerkRepository;
 import com.iiht.training.eloan.repository.ManagerRepository;
 import com.iiht.training.eloan.repository.UsersRepository;
 import com.iiht.training.eloan.service.AdminService;
-import com.iiht.training.eloan.util.ClerkUtil;
+import com.iiht.training.eloan.util.EloanUtil;
+
 
 @Service
 public class AdminServiceImpl implements AdminService {
@@ -72,6 +74,7 @@ public class AdminServiceImpl implements AdminService {
 	public ClerkDto registerClerk(ClerkDto clerkDto) {
 		Clerk clerk = this.clerkRepository.save(convertClerkInputDtoToEntity(clerkDto));
 		return convertClerkEntityToOutputDto(clerk);
+		
 	}
 
 	@Override

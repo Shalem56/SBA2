@@ -15,4 +15,7 @@ public interface CustomerService {
 	public LoanOutputDto getStatus(Long loanAppId);
 		
 	public List<LoanOutputDto> getStatusAll(Long customerId);
+	
+	public boolean getUserById(Long customerId);
 }
+

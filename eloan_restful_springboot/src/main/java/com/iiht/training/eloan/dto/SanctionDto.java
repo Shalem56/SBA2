@@ -14,10 +14,24 @@ public class SanctionDto {
 	@NotNull(message = "Term of Loan is required!")
 	private Double termOfLoan;
 	
+	@Min(value=1,message="Interest rate cannot be negitive or zero")
+	@NotNull(message = "Interest Rate is required!")
+	private Double interestRate;
+	
+	
 	@NotBlank(message = "Payment Start Date is required!")
 	private String paymentStartDate;
 	
+	@NotBlank(message = "Remarks is required!")
+	private String remarks;
+	
 
+	public String getRemarks() {
+		return remarks;
+	}
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
 	public Double getLoanAmountSanctioned() {
 		return loanAmountSanctioned;
 	}
@@ -37,5 +51,10 @@ public class SanctionDto {
 		this.paymentStartDate = paymentStartDate;
 	}
 	
-	
+	public Double getInterestRate() {
+		return interestRate;
+	}
+	public void setInterestRate(Double interestRate) {
+		this.interestRate = interestRate;
+	}
 }

@@ -32,7 +32,17 @@ public class SanctionInfo {
 	@Min(1)
 	@Column(nullable=false)
 	private Double termOfLoan;
+	
+	@Min(1)
+	@Column(nullable=false)
+	private Double interestRate;
 
+	public Double getInterestRate() {
+		return interestRate;
+	}
+	public void setInterestRate(Double interestRate) {
+		this.interestRate = interestRate;
+	}
 	@Column(nullable=false)
 	private String paymentStartDate;
 	
@@ -40,9 +50,19 @@ public class SanctionInfo {
 	private String loanClosureDate;
 	
 	@Column(nullable=false)
+	private String remarks;
+	
+	@Column(nullable=false)
 	@Min(1)
 	private Double monthlyPayment;
 	
+	
+	public String getRemarks() {
+		return remarks;
+	}
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
 	public Long getSanctionId() {
 		return sanctionId;
 	}

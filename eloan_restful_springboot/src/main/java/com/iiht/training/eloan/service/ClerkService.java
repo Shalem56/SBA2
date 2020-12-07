@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.iiht.training.eloan.dto.LoanOutputDto;
 import com.iiht.training.eloan.dto.ProcessingDto;
+import com.iiht.training.eloan.dto.exception.ExceptionResponse;
 
 public interface ClerkService {
 	
@@ -12,5 +13,7 @@ public interface ClerkService {
 	public ProcessingDto processLoan(Long clerkId,
 									 Long loanAppId,
 									 ProcessingDto processingDto);
+	public boolean getLoanById(Long loanAppId);
+	public boolean getClerkById(Long clerkId);
 
 }

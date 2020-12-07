@@ -41,6 +41,7 @@ public class AdminController {
 	@GetMapping("/all-clerks")
 	public ResponseEntity<List<ClerkDto>> getAllClerks()
 	{
+		
 		List<ClerkDto> clerks = this.adminService.getAllClerks();
 		ResponseEntity<List<ClerkDto>> response = new ResponseEntity<List<ClerkDto>>(clerks, HttpStatus.OK);
 		return response;

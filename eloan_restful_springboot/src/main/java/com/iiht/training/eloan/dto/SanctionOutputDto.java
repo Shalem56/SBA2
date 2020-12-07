@@ -6,6 +6,23 @@ public class SanctionOutputDto {
 	private String paymentStartDate;
 	private String loanClosureDate;
 	private Double monthlyPayment;
+	private Double interestRate;
+	private String remarks;
+	
+	
+	
+	public String getRemarks() {
+		return remarks;
+	}
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
+	public Double getInterestRate() {
+		return interestRate;
+	}
+	public void setInterestRate(Double interestRate) {
+		this.interestRate = interestRate;
+	}
 	public Double getLoanAmountSanctioned() {
 		return loanAmountSanctioned;
 	}

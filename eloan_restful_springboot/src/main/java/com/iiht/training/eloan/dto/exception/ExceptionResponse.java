@@ -1,6 +1,6 @@
 package com.iiht.training.eloan.dto.exception;
 
-public class ExceptionResponse extends Exception {
+public class ExceptionResponse {
 	private String message;
 	private Long timeStamp;
 	private Integer status;
